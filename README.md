@@ -29,6 +29,7 @@ Dynamic portfolio showcasing my expertise as a Lead Data Scientist with 8+ years
 
 ## 📂 Project Structure
 pragathi-portfolio/
+
 ├── index.html # Main portfolio page
 
 ├── images/ # All portfolio images
