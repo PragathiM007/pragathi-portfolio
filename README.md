@@ -61,7 +61,7 @@ This portfolio is automatically deployed via GitHub Pages. Any push to the `main
 
 ## 📜 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available.
 
 ---
 
