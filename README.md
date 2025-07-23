@@ -1,50 +1,65 @@
-# 🌐 Pragathi Porawakara Arachchige – Data Science Portfolio
+# Pragathi Porawakara Arachchige - Data Science Portfolio
 
-Welcome to my personal data science portfolio, designed to showcase selected projects that highlight my skills in machine learning, NLP, data analysis, time series forecasting, and visualization.
+[![GitHub Pages](https://img.shields.io/badge/View-Live%20Portfolio-blue?style=flat-square)](https://pragathim007.github.io/pragathi-portfolio/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-🔗 **Live Portfolio Website**  
-👉 [https://pragathim007.github.io/pragathi-portfolio/](https://pragathim007.github.io/pragathi-portfolio/)
+![Portfolio Screenshot](./images/portfolio-screenshot.png) *(Replace with your actual screenshot path)*
 
----
+## Professional Data Science Portfolio
 
-## 🧠 About Me
+Dynamic portfolio showcasing my expertise as a Lead Data Scientist with 8+ years of experience in AI/ML solutions, data engineering, and data strategy leadership.
 
-I’m a data scientist passionate about solving complex real-world problems using AI and analytics. With experience spanning fraud detection, customer behavior modeling, time series forecasting, and NLP, I bring both technical depth and business impact to my work.
+## ✨ Key Features
 
----
+- **Modern, Responsive Design** - Fully mobile-friendly interface
+- **Dark/Light Mode Toggle** - User preference saved locally
+- **Interactive Elements** - Smooth scrolling, hover effects
+- **Project Showcase** - Detailed case studies with tech stacks
+- **Skills Visualization** - Progress bars for technical competencies
+- **Professional Timeline** - Clean experience presentation
 
-## 🚀 Featured Projects
+## 🛠 Technical Stack
 
-| Project | Description |
-|--------|-------------|
-| **Credit Card Fraud Detection** | Trained XGBoost and Random Forest models on imbalanced data to flag fraudulent transactions with high recall. |
-| **Call Center Sentiment Analysis** | Used BERT + LSTM to predict customer sentiment from call transcripts and uncover patterns in dissatisfaction. |
-| **Call Volume Forecasting** | Forecasted contact center demand using SARIMA, Prophet, and ML regressors. |
-| **FIFA21: Age vs Performance** | Performed statistical EDA to examine correlation between age and player performance ratings in FIFA21. |
-| **Team Performance Analysis (SQL + Python)** | Integrated UEFA, FIFA, and Premier League data to explore player and team dynamics using SQL joins and Python. |
+**Frontend:**
+- HTML5, CSS3 (Flexbox, Grid)
+- JavaScript (DOM manipulation, localStorage)
+- Font Awesome Icons
+- Google Fonts (Inter)
 
----
+**Hosting:**
+- GitHub Pages
 
-## 📁 Project Structure
-
+## 📂 Project Structure
 pragathi-portfolio/
-├── index.html # Portfolio homepage
-├── README.md # This file
-└── (optional assets/ folder for images)
+├── index.html # Main portfolio page
+├── images/ # All portfolio images
+│ └── profile-og.png # Profile picture
+├── README.md # This documentation
+└── PragathiPorawakaraArachchige_Resume.pdf # Downloadable resume
 
 
----
+## 🚀 Deployment
 
-## 📬 Contact
+This portfolio is automatically deployed via GitHub Pages. Any push to the `main` branch triggers a rebuild.
 
-- 📧 Email: prmadushini@gmail.com  
-- 💼 LinkedIn: [linkedin.com/in/pragathi-madushinie](https://www.linkedin.com/in/pragathi-madushinie/)  
-- 💻 GitHub: [@PragathiM007](https://github.com/PragathiM007)
+## 🎯 Key Metrics Showcased
 
----
+- 40% operational efficiency improvement
+- 50% reduction in manual processes
+- $1.5M annual revenue retained
+- 20% increase in customer engagement
+
+## 🔗 Important Links
+
+- [Live Portfolio](https://pragathim007.github.io/pragathi-portfolio/)
+- [LinkedIn Profile](https://www.linkedin.com/in/pragathi-madushinie/)
+- [GitHub Profile](https://github.com/PragathiM007)
+- [Email Contact](mailto:prmadushini@gmail.com)
 
 ## 📜 License
 
-This site is created for professional and educational purposes. Content is freely shareable with attribution.
+This project is open source and available under the [MIT License](LICENSE).
 
+---
 
+*"Turning data into decisions and insights into impact"* - Pragathi Porawakara Arachchige
