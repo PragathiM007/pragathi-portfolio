@@ -3,8 +3,6 @@
 [![GitHub Pages](https://img.shields.io/badge/View-Live%20Portfolio-blue?style=flat-square)](https://pragathim007.github.io/pragathi-portfolio/)
 
 
-![Portfolio Screenshot](./images/portfolio-screenshot.png) *(Replace with your actual screenshot path)*
-
 ## Professional Data Science Portfolio
 
 Dynamic portfolio showcasing my expertise as a Lead Data Scientist with 8+ years of experience in AI/ML solutions, data engineering, and data strategy leadership.
@@ -32,9 +30,13 @@ Dynamic portfolio showcasing my expertise as a Lead Data Scientist with 8+ years
 ## 📂 Project Structure
 pragathi-portfolio/
 ├── index.html # Main portfolio page
+
 ├── images/ # All portfolio images
+
 │ └── profile-og.png # Profile picture
+
 ├── README.md # This documentation
+
 └── PragathiPorawakaraArachchige_Resume.pdf # Downloadable resume
 
 
