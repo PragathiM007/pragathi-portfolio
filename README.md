@@ -1,7 +1,7 @@
 # Pragathi Porawakara Arachchige - Data Science Portfolio
 
 [![GitHub Pages](https://img.shields.io/badge/View-Live%20Portfolio-blue?style=flat-square)](https://pragathim007.github.io/pragathi-portfolio/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
 
 ![Portfolio Screenshot](./images/portfolio-screenshot.png) *(Replace with your actual screenshot path)*
 
