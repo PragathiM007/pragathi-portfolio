@@ -1,103 +1,1022 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pragathi Porawakara Arachchige | Data Science Portfolio</title>
+    <meta name="description" content="Lead Data Scientist with 8+ years experience in AI, ML, and data governance">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pragathi Porawakara Arachchige | Lead Data Scientist">
+    <meta property="og:description" content="AI/ML Expert | Data Strategy Leader | NLP Specialist">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pragathidata.com">
+    <meta property="og:image" content="https://pragathidata.com/images/profile-og.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        * {
+          box-sizing: border-box;
+          transition: all 0.3s ease;
+        }
+        html {
+          scroll-behavior: smooth;
+        }
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            color: #333;
+          font-family: 'Inter', sans-serif;
+          margin: 0;
+          background-color: #f7f9fc;
+          color: #333;
+          line-height: 1.6;
         }
-        header, footer {
-            background: #222;
-            color: #fff;
-            padding: 20px 0;
+        header {
+          background-color: #173f8a;
+          color: #fff;
+          padding: 20px 40px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: sticky;
+          top: 0;
+          z-index: 100;
+        }
+        header h1 {
+          margin: 0;
+          font-size: 1.8em;
+        }
+        nav a {
+          color: #fff;
+          text-decoration: none;
+          margin-left: 20px;
+          font-weight: 500;
+          padding: 5px 10px;
+          border-radius: 5px;
+        }
+        nav a:hover {
+          background-color: rgba(255,255,255,0.1);
+          transform: translateY(-2px);
+        }
+        .section {
+          padding: 80px 40px;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        .section h2 {
+          text-align: center;
+          font-size: 2.2em;
+          margin-bottom: 40px;
+          color: #173f8a;
+          position: relative;
+        }
+        .section h2::after {
+          content: '';
+          display: block;
+          width: 80px;
+          height: 4px;
+          background: #173f8a;
+          margin: 15px auto;
+          border-radius: 2px;
+        }
+        .hero-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 30px;
+        }
+        .hero-text {
+          flex: 1;
+          min-width: 300px;
+        }
+        .hero-text h2 {
+          font-size: 2.5em;
+          margin-bottom: 10px;
+          color: #173f8a;
+        }
+        .hero-text p {
+          font-size: 1.2em;
+          line-height: 1.6;
+        }
+        .hero-image {
+          flex: 1;
+          max-width: 300px;
+          min-width: 250px;
+          text-align: center;
+        }
+        .hero-image img {
+          width: 100%;
+          max-width: 300px;
+          border-radius: 50%;
+          border: 5px solid #173f8a;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .contact-links a {
+          display: inline-block;
+          margin-right: 10px;
+          margin-top: 10px;
+          padding: 10px 20px;
+          border-radius: 25px;
+          font-weight: bold;
+          text-decoration: none;
+          transition: all 0.3s ease;
+        }
+        .contact-links a:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .email-btn { background-color: #1a3eea; color: #fff; }
+        .linkedin-btn { background-color: #0077b5; color: #fff; }
+        .github-btn { background-color: #000; color: #fff; }
+        .resume-btn {
+          background-color: #fff;
+          color: #173f8a;
+          border: 2px solid #173f8a;
+        }
+        .skills-grid, .projects-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          gap: 25px;
+          margin-top: 30px;
+        }
+        .skill-box, .project-box {
+          background: white;
+          padding: 25px;
+          border-radius: 12px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .skill-box:hover, .project-box:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .skill-box h3, .project-box h3 {
+          color: #173f8a;
+          margin-top: 0;
+          display: flex;
+          align-items: center;
+        }
+        .skill-box h3 i, .project-box h3 i {
+          margin-right: 10px;
+          font-size: 1.2em;
+        }
+        .skill-bar {
+          height: 10px;
+          background: #e0e0e0;
+          border-radius: 5px;
+          margin: 10px 0;
+          overflow: hidden;
+        }
+        .skill-level {
+          height: 100%;
+          background: #173f8a;
+          border-radius: 5px;
+        }
+        .about-box, .contact-box {
+          background: white;
+          padding: 40px;
+          border-radius: 12px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+          margin-top: 20px;
+        }
+        .project-links {
+          margin-top: 15px;
+          display: flex;
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+        .project-links a {
+          padding: 8px 15px;
+          border-radius: 5px;
+          text-decoration: none;
+          font-size: 0.9em;
+          background: #173f8a;
+          color: white;
+        }
+        .project-links a:hover {
+          opacity: 0.9;
+        }
+        .experience-timeline {
+          position: relative;
+          max-width: 800px;
+          margin: 40px auto;
+        }
+        .timeline-item {
+          padding: 20px 30px;
+          position: relative;
+          background-color: white;
+          border-radius: 8px;
+          margin-bottom: 20px;
+          box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        .timeline-item::before {
+          content: '';
+          position: absolute;
+          width: 3px;
+          background-color: #173f8a;
+          top: 0;
+          bottom: 0;
+          left: 20px;
+        }
+        .timeline-date {
+          font-weight: bold;
+          color: #173f8a;
+          margin-bottom: 5px;
+        }
+        .timeline-title {
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+        .timeline-company {
+          font-style: italic;
+          color: #666;
+        }
+        .impact-metrics {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 20px;
+          margin: 40px 0;
+        }
+        .metric {
+          background: white;
+          padding: 20px;
+          border-radius: 8px;
+          text-align: center;
+          box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        .metric h3 {
+          color: #173f8a;
+          font-size: 2.5em;
+          margin: 0;
+        }
+        .metric p {
+          margin: 5px 0 0;
+        }
+        .tech-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin: 20px 0;
+        }
+        .tech-tag {
+          display: inline-block;
+          background: #173f8a;
+          color: white;
+          padding: 5px 15px;
+          border-radius: 20px;
+          font-size: 0.9em;
+        }
+        .leadership-badge {
+          display: inline-flex;
+          align-items: center;
+          background: #e6f0ff;
+          color: #173f8a;
+          padding: 5px 15px;
+          border-radius: 20px;
+          margin: 10px 0;
+        }
+        .leadership-badge i {
+          margin-right: 8px;
+        }
+        footer {
+          text-align: center;
+          padding: 30px;
+          background: #173f8a;
+          color: #fff;
+        }
+        .theme-toggle {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background: #173f8a;
+          color: white;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+          z-index: 100;
+        }
+        .theme-toggle:hover {
+          transform: scale(1.1);
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+          background-color: #121212;
+          color: #f1f1f1;
+        }
+        body.dark-mode .skill-box,
+        body.dark-mode .project-box,
+        body.dark-mode .about-box,
+        body.dark-mode .contact-box,
+        body.dark-mode .timeline-item,
+        body.dark-mode .metric {
+          background-color: #1e1e1e;
+          color: #f1f1f1;
+        }
+        body.dark-mode .section h2,
+        body.dark-mode .skill-box h3,
+        body.dark-mode .project-box h3 {
+          color: #4a8cff;
+        }
+        body.dark-mode .section h2::after {
+          background: #4a8cff;
+        }
+        body.dark-mode .timeline-company {
+          color: #aaa;
+        }
+        body.dark-mode .leadership-badge {
+          background: #1a2a4a;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+          header {
+            flex-direction: column;
             text-align: center;
-        }
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-        }
-        .project {
-            background: #fff;
             padding: 15px;
-            margin-bottom: 20px;
-            border-left: 4px solid #007acc;
-        }
-        a {
-            color: #007acc;
-            text-decoration: none;
-        }
-        h1, h2 {
-            color: #222;
+          }
+          nav {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+          nav a {
+            margin: 5px 10px;
+          }
+          .hero-container {
+            flex-direction: column-reverse;
+          }
+          .section {
+            padding: 50px 20px;
+          }
+          .skills-grid, .projects-grid {
+            grid-template-columns: 1fr;
+          }
         }
     </style>
 </head>
 <body>
-
 <header>
     <h1>Pragathi Porawakara Arachchige</h1>
-    <p>Data Scientist | AI Enthusiast | Problem Solver</p>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#impact">Impact</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<div class="container">
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I’m a data scientist passionate about solving complex problems with data. My expertise spans machine learning, NLP, time series forecasting, and data visualization. With a strong foundation in engineering and analytics, I build solutions that drive business outcomes and user impact.</p>
-    </section>
+<section class="section hero" id="home">
+    <div class="hero-container">
+        <div class="hero-text">
+            <h2>Hi, I'm Pragathi</h2>
+            <p><strong>Lead Data Scientist | AI/ML Expert | Data Strategy Leader</strong></p>
+            <p>Dynamic Lead Data Scientist with 8+ years of experience in AI-driven solutions, machine learning, and data governance. Proven track record of improving operational efficiency by 40%, reducing manual intervention by 50%, and enhancing decision-making through predictive analytics.</p>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
+            <div class="leadership-badge">
+                <i class="fas fa-users"></i>
+                <span>Lead team of junior data scientists</span>
+            </div>
 
-        <div class="project">
-            <h3>Credit Card Fraud Detection</h3>
-            <p>Built machine learning models (XGBoost, RF) to detect fraudulent transactions in highly imbalanced data. Focused on precision, recall, and ROC-AUC performance.</p>
-            <a href="https://github.com/PragathiM007/CreditCardFraudDetection" target="_blank">View on GitHub</a>
+            <div class="contact-links">
+                <a class="email-btn" href="mailto:prmadushini@gmail.com">
+                    <i class="fas fa-envelope"></i> Email Me
+                </a>
+                <a class="linkedin-btn" href="https://www.linkedin.com/in/pragathi-madushinie/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a class="github-btn" href="https://github.com/PragathiM007" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a class="resume-btn" href="PragathiPorawakaraArachchige_Resume.pdf" download>
+                    <i class="fas fa-download"></i> Resume
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/profile-og.png" alt="Pragathi Porawakara Arachchige - Professional Photo">
+        </div>
+    </div>
+</section>
+
+<section class="section" id="impact">
+    <h2>Professional Impact</h2>
+    <div class="impact-metrics">
+        <div class="metric">
+            <h3>40%</h3>
+            <p>Operational efficiency improvement</p>
+        </div>
+        <div class="metric">
+            <h3>50%</h3>
+            <p>Reduction in manual processes</p>
+        </div>
+        <div class="metric">
+            <h3>20%</h3>
+            <p>Increase in customer engagement</p>
+        </div>
+        <div class="metric">
+            <h3>$1.5M</h3>
+            <p>Annual revenue retained</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="projects">
+    <h2>Featured Projects</h2>
+    <div class="projects-grid">
+        <div class="project-box">
+            <h3><i class="fas fa-robot"></i> AI-Powered Auto-Call Summarization</h3>
+            <p>Developed NLP-based summarization tool using SBERT and TF-IDF that reduced manual call search time by 40% (from 10 hours to 6 hours weekly per user).</p>
+
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">SBERT</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">Scikit-Learn</span>
+            </div>
+
+            <div class="project-links">
+                <a href="#"><i class="fas fa-chart-bar"></i> Case Study</a>
+                <a href="#"><i class="fab fa-github"></i> Code</a>
+            </div>
         </div>
 
-        <div class="project">
-            <h3>Call Center Sentiment Analysis</h3>
-            <p>Applied BERT + LSTM models on call transcripts to classify sentiment and detect dissatisfaction drivers such as billing and reservation issues.</p>
-            <a href="https://github.com/PragathiM007/PAPM_DSC550" target="_blank">View on GitHub</a>
+        <div class="project-box">
+            <h3><i class="fas fa-chart-line"></i> Tableau Dashboards for Executives</h3>
+            <p>Created 15+ interactive dashboards monitoring 50+ KPIs, enabling 20% faster response times to customer issues and reducing churn by 8%.</p>
+
+            <div class="tech-tags">
+                <span class="tech-tag">Tableau</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Data Visualization</span>
+            </div>
+
+            <div class="project-links">
+                <a href="#"><i class="fas fa-link"></i> Live Demo</a>
+                <a href="#"><i class="fab fa-github"></i> Code</a>
+            </div>
         </div>
 
-        <div class="project">
-            <h3>Time Series Forecasting – Call Volume</h3>
-            <p>Forecasted daily call volumes using SARIMA, Prophet, and XGBoost. Captured seasonality trends and outlier events to improve staffing efficiency.</p>
-            <a href="#" target="_blank">Coming Soon</a>
+        <div class="project-box">
+            <h3><i class="fas fa-project-diagram"></i> Topic Modeling for AgentOS</h3>
+            <p>Implemented LDA topic modeling to categorize agent queries, improving agent efficiency by 15% and reducing handling time by 10%.</p>
+
+            <div class="tech-tags">
+                <span class="tech-tag">LDA</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Scikit-Learn</span>
+            </div>
+
+            <div class="project-links">
+                <a href="#"><i class="fas fa-file-alt"></i> White Paper</a>
+                <a href="#"><i class="fab fa-github"></i> Code</a>
+            </div>
         </div>
 
-        <div class="project">
-            <h3>FIFA21: Age vs Performance Analysis</h3>
-            <p>Explored the correlation between player age and performance in FIFA21 using statistical methods and visualizations.</p>
-            <a href="https://github.com/PragathiM007/PAPMDEC530TermProject" target="_blank">View on GitHub</a>
+        <div class="project-box">
+            <h3><i class="fas fa-database"></i> ETL Pipeline Optimization</h3>
+            <p>Optimized data ingestion processes, improving efficiency by 40% and reducing latency for business intelligence reporting.</p>
+
+            <div class="tech-tags">
+                <span class="tech-tag">ETL</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Data Engineering</span>
+            </div>
+
+            <div class="project-links">
+                <a href="#"><i class="fas fa-cogs"></i> Architecture</a>
+                <a href="#"><i class="fab fa-github"></i> Code</a>
+            </div>
         </div>
 
-        <div class="project">
-            <h3>Soccer Team Performance (SQL + Python)</h3>
-            <p>Integrated FIFA, Premier League, and UEFA datasets using SQL joins and performed EDA using Python to discover team performance trends.</p>
-            <a href="https://github.com/PragathiM007/PAPM_DSC540_TermProject" target="_blank">View on GitHub</a>
-        </div>
-    </section>
+        <!-- Movie Recommendation System -->
+        <div class="project-box">
+            <h3><i class="fas fa-film"></i> Movie Recommendation System</h3>
+            <p>Content-based recommender system using cosine similarity and TF-IDF vectorization with Streamlit UI.</p>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: prmadushini@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/pragathi-madushinie/" target="_blank">Connect with me</a></p>
-        <p>GitHub: <a href="https://github.com/PragathiM007" target="_blank">@PragathiM007</a></p>
-    </section>
-</div>
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">Streamlit</span>
+                <span class="tech-tag">Scikit-Learn</span>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/PragathiM007/Movie-Recommendation-System" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://movie-recommender-pragathi.streamlit.app/" target="_blank">
+                    <i class="fas fa-link"></i> Live Demo
+                </a>
+            </div>
+        </div>
+
+        <!-- Customer Segmentation -->
+        <div class="project-box">
+            <h3><i class="fas fa-users"></i> Customer Segmentation</h3>
+            <p>RFM analysis and K-Means clustering for customer segmentation with interactive Plotly visualizations.</p>
+
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">K-Means</span>
+                <span class="tech-tag">Plotly</span>
+                <span class="tech-tag">Pandas</span>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/PragathiM007/Customer-Segmentation" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://github.com/PragathiM007/Customer-Segmentation/blob/main/Customer_Segmentation.ipynb" target="_blank">
+                    <i class="fas fa-book"></i> Notebook
+                </a>
+            </div>
+        </div>
+
+        <!-- Sentiment Analysis -->
+        <div class="project-box">
+            <h3><i class="fas fa-comment-dots"></i> Sentiment Analysis</h3>
+            <p>NLP pipeline for sentiment classification using VADER and TextBlob with comparative analysis.</p>
+
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">TextBlob</span>
+                <span class="tech-tag">VADER</span>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/PragathiM007/Sentiment-Analysis" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://github.com/PragathiM007/Sentiment-Analysis/blob/main/Sentiment_Analysis.ipynb" target="_blank">
+                    <i class="fas fa-book"></i> Notebook
+                </a>
+            </div>
+        </div>
+
+        <!-- Loan Prediction -->
+        <div class="project-box">
+            <h3><i class="fas fa-hand-holding-usd"></i> Loan Prediction</h3>
+            <p>Machine learning model to predict loan approval using Random Forest and feature engineering.</p>
+
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Random Forest</span>
+                <span class="tech-tag">Feature Engineering</span>
+                <span class="tech-tag">Scikit-Learn</span>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/PragathiM007/Loan-Prediction" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://github.com/PragathiM007/Loan-Prediction/blob/main/Loan%20Prediction.ipynb" target="_blank">
+                    <i class="fas fa-book"></i> Notebook
+                </a>
+            </div>
+        </div>
+
+        <div class="project-box">
+            <h3><i class="fas fa-futbol"></i> FIFA21 Age vs Performance Analysis</h3>
+            <p>Exploratory Data Analysis of FIFA21 player dataset examining the relationship between age and performance metrics with interactive visualizations.</p>
+
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Seaborn</span>
+                <span class="tech-tag">Matplotlib</span>
+                <span class="tech-tag">EDA</span>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/PragathiM007/FIFA21-Age-vs-Performance-EDA" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://github.com/PragathiM007/FIFA21-Age-vs-Performance-EDA/blob/main/FIFA21_Age_vs_Performance.ipynb" target="_blank">
+                    <i class="fas fa-book"></i> Notebook
+                </a>
+            </div>
+        </div>
+
+        <div class="project-box">
+            <h3><i class="fas fa-headset"></i> Call Center Sentiment Analysis</h3>
+            <p>NLP analysis of customer service call transcripts to identify sentiment patterns and improve service quality using VADER and TextBlob.</p>
+
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">TextBlob</span>
+                <span class="tech-tag">VADER</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Matplotlib</span>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/PragathiM007/Call-Center-Sentiment-Analysis" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://github.com/PragathiM007/Call-Center-Sentiment-Analysis/blob/main/Call_Center_Sentiment_Analysis.ipynb" target="_blank">
+                    <i class="fas fa-book"></i> Notebook
+                </a>
+                <a href="#" class="case-study-link">
+                    <i class="fas fa-chart-bar"></i> Case Study
+                </a>
+            </div>
+        </div>
+
+        <div class="project-box">
+            <h3><i class="fas fa-trophy"></i> Soccer Team Performance Analysis</h3>
+            <p>Comprehensive analysis of soccer team metrics with interactive dashboards to evaluate team strategies and player contributions.</p>
+
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Tableau</span>
+                <span class="tech-tag">Seaborn</span>
+                <span class="tech-tag">Sports Analytics</span>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/PragathiM007/Soccer-Team-Performance-Analysis" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://github.com/PragathiM007/Soccer-Team-Performance-Analysis/blob/main/Soccer_Team_Performance_Analysis.ipynb" target="_blank">
+                    <i class="fas fa-book"></i> Notebook
+                </a>
+                <a href="#" class="dashboard-link">
+                    <i class="fas fa-chart-line"></i> Live Dashboard
+                </a>
+            </div>
+
+            <!-- Special soccer-specific badge -->
+            <div class="soccer-badge">
+                <i class="fas fa-star"></i>
+                <span>Combines professional skills with personal passion</span>
+            </div>
+        </div>
+
+        <!-- Credit Card Fraud Detection -->
+        <div class="project-box">
+            <h3><i class="fas fa-credit-card"></i> Credit Card Fraud Detection</h3>
+            <p>Machine learning system to detect fraudulent transactions with 99% accuracy using anomaly detection algorithms.</p>
+
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Scikit-Learn</span>
+                <span class="tech-tag">Isolation Forest</span>
+                <span class="tech-tag">SMOTE</span>
+                <span class="tech-tag">Feature Engineering</span>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/PragathiM007/Credit-Card-Fraud-Detection" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://github.com/PragathiM007/Credit-Card-Fraud-Detection/blob/main/Fraud_Detection.ipynb" target="_blank">
+                    <i class="fas fa-book"></i> Notebook
+                </a>
+                <a href="#" class="fraud-case-study">
+                    <i class="fas fa-shield-alt"></i> Fraud Patterns
+                </a>
+            </div>
+        </div>
+
+        <!-- Time Series Forecasting -->
+        <div class="project-box">
+            <h3><i class="fas fa-chart-line"></i> Call Volume Forecasting</h3>
+            <p>ARIMA and Prophet models to predict call center volumes, reducing staffing costs by 15% through optimized scheduling.</p>
+
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">ARIMA</span>
+                <span class="tech-tag">Prophet</span>
+                <span class="tech-tag">Time Series</span>
+                <span class="tech-tag">Statsmodels</span>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/PragathiM007/Time-Series-Forecasting-Call-Volume" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://github.com/PragathiM007/Time-Series-Forecasting-Call-Volume/blob/main/Call_Volume_Forecasting.ipynb" target="_blank">
+                    <i class="fas fa-book"></i> Notebook
+                </a>
+                <a href="#" class="forecast-demo">
+                    <i class="fas fa-play-circle"></i> Forecast Demo
+                </a>
+            </div>
+        </div>
+
+        <!-- Soccer Transfer Market Prediction -->
+        <div class="project-box">
+            <h3><i class="fas fa-euro-sign"></i> Player Value Prediction</h3>
+            <p>Predicting soccer player transfer values using performance metrics with 85% accuracy (RMSE: €1.2M).</p>
+
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">XGBoost</span>
+                <span class="tech-tag">Feature Engineering</span>
+                <span class="tech-tag">Sports Analytics</span>
+                <span class="tech-tag">Web Scraping</span>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/PragathiM007/Soccer-Transfer-Market-Player-Value-Prediction" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://github.com/PragathiM007/Soccer-Transfer-Market-Player-Value-Prediction/blob/main/Player_Value_Prediction.ipynb" target="_blank">
+                    <i class="fas fa-book"></i> Notebook
+                </a>
+                <a href="#" class="transfer-app">
+                    <i class="fas fa-calculator"></i> Value Calculator
+                </a>
+            </div>
+
+            <div class="soccer-badge">
+                <i class="fas fa-futbol"></i>
+                <span>Real Madrid transfer target analysis included</span>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="https://github.com/PragathiM007?tab=repositories" target="_blank" class="github-btn" style="padding: 12px 25px;">
+                <i class="fab fa-github"></i> View All Projects on GitHub
+            </a>
+        </div>
+
+
+
+    </div>
+</section>
+
+<section class="section" id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+
+        <!-- Machine Learning -->
+        <div class="skill-box">
+            <h3><i class="fas fa-brain"></i> Machine Learning</h3>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 95%"></div>
+            </div>
+            <div class="tech-tags">
+                <span class="tech-tag">Scikit-Learn</span>
+                <span class="tech-tag">TensorFlow</span>
+                <span class="tech-tag">XGBoost</span>
+                <span class="tech-tag">Random Forest</span>
+                <span class="tech-tag">SBERT</span>
+                <span class="tech-tag">TF-IDF</span>
+                <span class="tech-tag">LDA</span>
+                <span class="tech-tag">Jupyter</span>
+            </div>
+        </div>
+
+        <!-- Data Engineering -->
+        <div class="skill-box">
+            <h3><i class="fas fa-database"></i> Data Engineering</h3>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 90%"></div>
+            </div>
+            <div class="tech-tags">
+                <span class="tech-tag">Informatica</span>
+                <span class="tech-tag">Azure Data Factory</span>
+                <span class="tech-tag">AWS S3</span>
+                <span class="tech-tag">ETL Pipelines</span>
+                <span class="tech-tag">Kafka</span>
+                <span class="tech-tag">Snowflake</span>
+                <span class="tech-tag">Redshift</span>
+            </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-box">
+            <h3><i class="fas fa-server"></i> Databases</h3>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 90%"></div>
+            </div>
+            <div class="tech-tags">
+                <span class="tech-tag">SQL Server</span>
+                <span class="tech-tag">Oracle</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">MongoDB</span>
+            </div>
+        </div>
+
+        <!-- Data Visualization -->
+        <div class="skill-box">
+            <h3><i class="fas fa-chart-bar"></i> Data Visualization</h3>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 85%"></div>
+            </div>
+            <div class="tech-tags">
+                <span class="tech-tag">Tableau</span>
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">Spotfire</span>
+                <span class="tech-tag">Tableau Prep</span>
+                <span class="tech-tag">SSRS</span>
+            </div>
+        </div>
+
+        <!-- Tools & Platforms -->
+        <div class="skill-box">
+            <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 80%"></div>
+            </div>
+            <div class="tech-tags">
+                <span class="tech-tag">GitHub</span>
+                <span class="tech-tag">VS Code</span>
+                <span class="tech-tag">Alteryx</span>
+                <span class="tech-tag">Splunk</span>
+                <span class="tech-tag">Excel (Advanced)</span>
+            </div>
+        </div>
+
+        <!-- Operating Systems -->
+        <div class="skill-box">
+            <h3><i class="fas fa-desktop"></i> Operating Systems</h3>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 85%"></div>
+            </div>
+            <div class="tech-tags">
+                <span class="tech-tag">Windows</span>
+                <span class="tech-tag">Linux</span>
+            </div>
+        </div>
+
+        <!-- Programming Languages -->
+        <div class="skill-box">
+            <h3><i class="fas fa-code"></i> Programming</h3>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 90%"></div>
+            </div>
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Bash</span>
+                <span class="tech-tag">JavaScript</span>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <h3><i class="fas fa-cloud"></i> Cloud Platforms</h3>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 80%"></div>
+            </div>
+            <div class="tech-tags">
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">Azure</span>
+                <span class="tech-tag">GCP</span>
+                <span class="tech-tag">SageMaker</span>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <h3><i class="fas fa-cogs"></i> MLOps</h3>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 75%"></div>
+            </div>
+            <div class="tech-tags">
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">CI/CD</span>
+                <span class="tech-tag">Kubeflow</span>
+                <span class="tech-tag">MLflow</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="experience">
+    <h2>Professional Experience</h2>
+    <div class="experience-timeline">
+        <div class="timeline-item">
+            <div class="timeline-date">2019 - Present</div>
+            <div class="timeline-title">Lead Data Scientist / Lead Data Engineer</div>
+            <div class="timeline-company">Charter Spectrum, Saint Louis, MO</div>
+            <ul>
+                <li>Led team of 5 data scientists in developing AI solutions that improved customer service efficiency by 40%</li>
+                <li>Built vector search-based recommendation engine increasing customer engagement by 20%</li>
+                <li>Optimized ETL pipelines improving data ingestion efficiency by 40%</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">2018 - 2019</div>
+            <div class="timeline-title">Senior IT Data Modeling Lead Analyst</div>
+            <div class="timeline-company">Express Scripts, Saint Louis, MO</div>
+            <ul>
+                <li>Improved query performance by 35% through SQL Server data modeling</li>
+                <li>Reduced data processing time by 50% through ETL pipeline optimization</li>
+                <li>Increased data retrieval efficiency by 40% through architecture redesign</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">2017 - 2018</div>
+            <div class="timeline-title">Business Data Operations Analyst IV</div>
+            <div class="timeline-company">Wells Fargo Advisors, Saint Louis, MO</div>
+            <ul>
+                <li>Automated reporting workflows reducing manual effort by 40%</li>
+                <li>Improved forecasting accuracy by 20% through advanced statistical analysis</li>
+                <li>Enhanced data quality by 30% through governance standards</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="about">
+    <h2>About Me</h2>
+    <div class="about-box">
+        <p>Dynamic Lead Data Scientist with 8+ years of experience in AI-driven solutions, machine learning, and data governance. Proven track record of improving operational efficiency by 40%, reducing manual intervention by 50%, and enhancing decision-making through predictive analytics and data visualization.</p>
+
+        <p>I hold three Master's degrees (two MSc and one MBA) which have equipped me with both technical expertise and business acumen. My technical specialties include:</p>
+
+        <div class="tech-tags">
+            <span class="tech-tag">Machine Learning</span>
+            <span class="tech-tag">Natural Language Processing</span>
+            <span class="tech-tag">Data Engineering</span>
+            <span class="tech-tag">Cloud Architecture</span>
+            <span class="tech-tag">Data Visualization</span>
+        </div>
+
+        <p>Outside of work, I'm an avid Real Madrid fan, world traveler, and enthusiast of Asian dramas. These diverse interests help me maintain creativity and bring unique perspectives to problem-solving in data science.</p>
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <h2>Get in Touch</h2>
+    <div class="contact-box">
+        <p>I'm currently open to discussing new opportunities, collaborations, or speaking engagements. Feel free to reach out via any of these channels:</p>
+
+        <div class="contact-links">
+            <a class="email-btn" href="mailto:prmadushini@gmail.com">
+                <i class="fas fa-envelope"></i> Email Me
+            </a>
+            <a class="linkedin-btn" href="https://www.linkedin.com/in/pragathi-madushinie/" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a class="github-btn" href="https://github.com/PragathiM007" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a class="resume-btn" href="PragathiPorawakaraArachchige_Resume.pdf" download>
+                <i class="fas fa-download"></i> Resume
+            </a>
+        </div>
+    </div>
+</section>
 
 <footer>
-    <p>&copy; 2025 Pragathi Porawakara Arachchige</p>
+    &copy; 2025 Pragathi Porawakara Arachchige. All rights reserved.
 </footer>
 
+<div class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i>
+</div>
+
+<script>
+    // Dark mode toggle functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    // Check for saved user preference
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('dark-mode');
+      themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+
+      if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      } else {
+        localStorage.setItem('darkMode', 'disabled');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+</script>
 </body>
 </html>
